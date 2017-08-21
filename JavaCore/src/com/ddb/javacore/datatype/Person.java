@@ -29,6 +29,18 @@ public class Person {
 	public void displayer() {
 		System.out.println("姓名是：" + this.name + " 年龄是:" + this.age + " 婚姻状况:" + this.married);
 	}
+	
+	public void printSelf(String name,int age,boolean married) {
+		System.out.println("姓名是：" + name + " 年龄是:" + age + " 婚姻状况:" + married);
+	}
+	
+	
+	
+
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + ", married=" + married + "]";
+	}
 
 	public static void main(String[] args) {
 		//这些是局部变量
@@ -42,6 +54,11 @@ public class Person {
 		//使用有参数的构造函数
 		Person p2 = new Person("luna",23,false);
 		p2.displayer();
+		
+		p2.printSelf("liming", 30, true);
+		
+		//调用p2的toString()方法，打印方法的返回值！
+		System.out.println(p2.toString());
 		
 	}
 
