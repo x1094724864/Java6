@@ -2,10 +2,20 @@ package com.ddb.javacore.demo;
 
 import java.util.Scanner;
 
+/**
+ * 这是一个文档注释，这个类演示了从控制台读取姓名和年龄
+ * @author win
+ *
+ */
 public class NameAge {
 
 	private static Scanner sc;
-
+	
+	/*
+	 * 这是一个多行注释，是加在主方法main上的
+	 * 这是一个测试！
+	 * 
+	 */
 	public static void main(String[] args) {
 		System.out.println("请输入你的姓名：");
 		sc = new Scanner(System.in);
