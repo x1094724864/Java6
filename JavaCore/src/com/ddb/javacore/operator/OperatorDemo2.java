@@ -60,7 +60,6 @@ public class OperatorDemo2 {
 		a += 5;	// a = a+5;
 		a *= 3;	// a = a*3;
 		a %= 3;	// a = a % 3;
-		
 
 	}
 

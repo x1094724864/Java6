@@ -31,18 +31,35 @@ public class OperatorDemo {
 		boolean b2 = false;
 		System.out.println("bl ==" + b1);
 		System.out.println("b2 ==" + b2);
-		System.out.println("b1 && b2 :" + (b1 && b2));	//相与
-		System.out.println("b1 || b2 :" + (b1 || b2));	//相或
-		System.out.println(" !b2 :" + (!b2));	//取反，取非
+		System.out.println("b1 && b2 :" + (b1 && b2)); // 相与
+		System.out.println("b1 || b2 :" + (b1 || b2)); // 相或
+		System.out.println(" !b2 :" + (!b2)); // 取反，取非
 
 		boolean b3 = true;
 		System.out.println("b3 ==" + b3);
-		System.out.println("b1 && b3 :" + (b1 && b3));	//相与
-		System.out.println("b1 || b3 :" + (b1 || b3));	//相或
+		System.out.println("b1 && b3 :" + (b1 && b3)); // 相与
+		System.out.println("b1 || b3 :" + (b1 || b3)); // 相或
+
+		// 短路运算：
+		/*
+		 * 总结：
+		 * 逻辑与短路：如果第一个为false，后面的则不运算 
+		 * 逻辑或短路：如果第一个为true，后面则不运算。
+		 */
+		int aa = 5;// 定义一个变量；
+		boolean bb = (aa < 4) && (aa++ < 10);
+		System.out.println("使用短路逻辑运算符的结果为" + bb);
+		System.out.println("aa的结果为" + aa);
 		
-		//三目运算符  ？  :
+		System.out.println("逻辑或短路测试：");
+		//boolean cc = (aa < 4) || (aa++ < 10);
+		boolean cc = (aa > 4) || (aa++ < 10);
+		System.out.println("cc的结果为" + cc);
+		System.out.println("aa的结果为" + aa);
 		
-		
+
+		// 三目运算符 ？ :
+
 	}
 
 }
