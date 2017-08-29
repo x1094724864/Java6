@@ -18,4 +18,14 @@ public class Penguin extends Pet {
 		
 	}
 
+	//宠物喂食的方法
+	public void eat() {
+		System.out.println("这是QQ的喂食方法！");
+	}
+	
+	//和主人一起游泳
+	public void swimming () {
+      	System.out.println("QQ和主人一起游泳！");
+	}
+
 }

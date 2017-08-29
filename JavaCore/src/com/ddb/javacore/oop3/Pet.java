@@ -22,5 +22,7 @@ public abstract class Pet {
 	}
 
 	public abstract void print();
+
+	public abstract void eat();
 	
 }

@@ -28,5 +28,14 @@ public class Dog extends Pet {
 		return this;
 	}
 
+	//宠物喂食的方法
+	public void eat() {
+		System.out.println("这是Gougou的喂食方法！");
+	}
+	//定以和主人的玩耍方法
+	public void catchingFlyDisc() {
+      	 System.out.println("Gougou和主人正在玩飞碟！");
+	}
 
+	
 }
