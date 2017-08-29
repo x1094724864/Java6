@@ -22,16 +22,17 @@ public class Test {
 		master.feed(cat);
 		
 		//领取宠物
-		Pet dog1= master.getPet("dog");
-		Pet cat1= master.getPet("cat");
-		Pet penguin1= master.getPet("penguin");
-		dog1.eat();
-		cat1.eat();
-		penguin1.eat();
+//		Pet dog1= master.getPet("dog");
+//		Pet cat1= master.getPet("cat");
+//		Pet penguin1= master.getPet("penguin");
+//		dog1.eat();
+//		cat1.eat();
+//		penguin1.eat();
 		
 		//和宠物玩耍
 		master.play(dog);
-		
+		master.play(cat);
+		master.play(penguin);	
 	}
 
 }

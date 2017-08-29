@@ -30,5 +30,8 @@ public class Cat extends Pet {
 		System.out.println("这是Cat的喂食方法！");
 	}
 	
+	public void catchMouse() {
+		System.out.println("Cat 抓老鼠！");
+	}
 
 }
