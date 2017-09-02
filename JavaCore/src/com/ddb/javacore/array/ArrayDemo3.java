@@ -19,7 +19,7 @@ public class ArrayDemo3 {
 
 		System.out.println("数组排序后");
 		outputArray(scores);
-
+		
 		// 引用数据类型的排序见java4的源码
 
 		// 数组的拷贝，具体用法详见JDK手册
