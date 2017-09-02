@@ -30,7 +30,7 @@ public class ArrayDemo {
 		int[] ids = new int[] { 11, 22, 33 };	//要注意的是等号后面的[]里面不能写数字
 
 		//数组越界异常
-		System.out.println(prices[3]); 	//数组越界异常，索引的下标不能大于等于数组的容量
+		System.out.println(prices[2]); 	//数组越界异常，索引的下标不能大于等于数组的容量
 		
 		
 		
