@@ -2,5 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/Program Files/eclipse/lombok.jar" sourcepath="C:/Users/win/AppData/Local/Temp/.org.sf.feeling.decompiler1503616517279/source/lombok-1.16.18-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
