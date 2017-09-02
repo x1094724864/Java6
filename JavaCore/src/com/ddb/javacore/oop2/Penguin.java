@@ -1,7 +1,5 @@
 package com.ddb.javacore.oop2;
 
-import com.sun.javafx.binding.StringFormatter;
-
 public class Penguin {
 	String name = "QQ";
 	String sex = "Q仔";
@@ -24,6 +22,7 @@ public class Penguin {
 		this.sex = sex;
 		this.love = love;
 		System.out.println("Penguin的有参构造函数已执行！");
+		
 	}
 
 	@Override
