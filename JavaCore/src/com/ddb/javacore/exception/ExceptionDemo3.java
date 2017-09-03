@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
-import com.sun.glass.ui.TouchInputSupport;
-
 /**
  * 使用log4j代替syso
  * 
