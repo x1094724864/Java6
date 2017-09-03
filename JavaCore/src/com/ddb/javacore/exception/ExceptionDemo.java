@@ -45,8 +45,8 @@ public class ExceptionDemo {
 		
 		
 		//Student student = getStudent();
-		//student.toString();		//调用一个null对象的的属性或者方法，则必然发生空指针异常
-		
+		// student.toString(); //调用一个null对象的的属性或者方法，则必然发生空指针异常
+
 		System.out.println("感谢使用本程序！");
 
 	}
