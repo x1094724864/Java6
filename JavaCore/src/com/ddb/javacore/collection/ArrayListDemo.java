@@ -3,8 +3,6 @@ package com.ddb.javacore.collection;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
-
 public class ArrayListDemo {
 
 	public static void main(String[] args) {
@@ -39,7 +37,7 @@ public class ArrayListDemo {
 
 	}
 
-	private static void printList(List dogs) {
+	public static void printList(List dogs) {
 		System.out.println("分别是：");
 		for (int i = 0; i < dogs.size(); i++) {
 			// 获取每个狗狗，进行打印
