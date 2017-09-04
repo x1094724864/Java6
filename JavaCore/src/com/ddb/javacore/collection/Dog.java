@@ -16,7 +16,8 @@ public class Dog {
 
 	@Override
 	public String toString() {
-		return "Dog [name=" + name + "]";
+		return name ;
+//		return "狗狗的名字是：\t" + name ;
 	}
 
 	@Override
