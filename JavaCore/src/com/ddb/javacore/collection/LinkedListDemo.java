@@ -14,13 +14,14 @@ public class LinkedListDemo {
 		Dog feifeiDog = new Dog("肥肥");
 		System.out.println("dogs:");
 		dogs.add(ououDog);
+		dogs.add(ououDog);	//重复添加
 		dogs.add(yayaDog);
 		ArrayListDemo.printList(dogs);
 		System.out.println("在头部和尾部添加对象：");
 		dogs.addFirst(feifeiDog); // 添加到头部
 		dogs.addLast(meimeiDog); // 添加到尾部
 		ArrayListDemo.printList(dogs);
-		
+
 		Dog dogFirst = (Dog) dogs.getFirst(); // 获取第一个对象
 		System.out.println("第一条狗狗昵称是" + dogFirst.getName());
 
