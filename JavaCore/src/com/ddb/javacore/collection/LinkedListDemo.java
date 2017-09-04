@@ -20,7 +20,7 @@ public class LinkedListDemo {
 		dogs.addFirst(feifeiDog); // 添加到头部
 		dogs.addLast(meimeiDog); // 添加到尾部
 		ArrayListDemo.printList(dogs);
-
+		
 		Dog dogFirst = (Dog) dogs.getFirst(); // 获取第一个对象
 		System.out.println("第一条狗狗昵称是" + dogFirst.getName());
 
