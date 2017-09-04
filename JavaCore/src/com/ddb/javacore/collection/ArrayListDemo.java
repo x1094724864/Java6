@@ -1,6 +1,7 @@
 package com.ddb.javacore.collection;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ArrayListDemo {
@@ -8,7 +9,8 @@ public class ArrayListDemo {
 	public static void main(String[] args) {
 		// 演示ArrayList
 		Dog ououDog = new Dog("欧欧");
-		List dogs = new ArrayList<Dog>();
+		// List dogs = new ArrayList<Dog>();
+		ArrayList<Dog> dogs = new ArrayList<Dog>();
 		// 向容器中添加元素
 		dogs.add(ououDog);
 		dogs.add(new Dog("yaya"));
@@ -17,6 +19,19 @@ public class ArrayListDemo {
 
 		System.out.println("共有：" + dogs.size() + "条狗狗！");
 		printList(dogs);
+
+		// 对ArrayList进行遍历
+		System.out.println("使用迭代器遍历容器：");
+		Iterator<Dog> iterator = dogs.iterator();
+		while (iterator.hasNext()) {
+			Dog dog = iterator.next();
+			System.out.println(dog);
+		}
+
+		System.out.println("使用foreach：");
+		for (Dog dog : dogs) {
+			System.out.println(dog);
+		}
 
 		Dog yayaDog = new Dog("yaya");
 		// 判断是否包含指定的狗狗
