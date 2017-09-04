@@ -7,6 +7,7 @@ public class ByZeroException extends Exception {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	//都是工具自己生成的！
 	public ByZeroException() {
 		super();
 	}
