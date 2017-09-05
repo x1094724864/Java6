@@ -4,7 +4,7 @@ public class StringDemo {
 
 	public static void main(String[] args) {
 		// String demo = "AABBCCDDEEFF";
-		String demo = new String("AAbbCCDDEEFF");
+		String demo = new String("  AAbb  CCDDEEFF  ");
 		System.out.println("demo:" + demo);
 		System.out.println("demo.length():" + demo.length());
 		System.out.println("demo.substring(3, 8):" + demo.substring(3, 8));
@@ -19,6 +19,11 @@ public class StringDemo {
 
 		System.out.println("demo.equals(\"AABBCCDDEEFF\"):" + demo.equals("AABBCCDDEEFF"));
 		System.out.println("demo.equalsIgnoreCase(\"AABBCCDDEEFF\"):" + demo.equalsIgnoreCase("AABBCCDDEEFF"));
+
+		System.out.println("demo.startsWith(\"AA\"):" + demo.startsWith("AA"));
+		System.out.println("demo.endsWith(\"MM\"):" + demo.endsWith("MM"));
+
+		System.out.println("demo.trim():" + demo.trim());
 
 	}
 
