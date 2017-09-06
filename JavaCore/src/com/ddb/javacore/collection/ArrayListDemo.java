@@ -12,11 +12,11 @@ public class ArrayListDemo {
 		// List dogs = new ArrayList<Dog>();
 		ArrayList<Dog> dogs = new ArrayList<Dog>();
 		// 向容器中添加元素
-		dogs.add(ououDog);
 		dogs.add(new Dog("yaya"));
 		dogs.add(new Dog("meimei"));
-		dogs.add(0, new Dog("awang")); // 在指定的位置添加元素
+		dogs.add(2, new Dog("awang")); // 在指定的位置添加元素
 
+		dogs.add(0,ououDog);
 		System.out.println("共有：" + dogs.size() + "条狗狗！");
 		printList(dogs);
 
