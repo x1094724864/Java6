@@ -26,8 +26,11 @@ public class ObjectSeriDemo {
 			System.out.println("对象反序列化开始...");
 			FileInputStream fis = new FileInputStream(url);
 			ObjectInputStream ois = new ObjectInputStream(fis);
+			Person person = (Person) ois.readObject();
+			System.out.println(person.getName());
 			System.out.println(ois.readObject());
-			System.out.println(ois.readObject());
+			
+			System.out.println();
 			ois.close();
 			System.out.println("反序列化结束！");
 		} catch (FileNotFoundException e) {
