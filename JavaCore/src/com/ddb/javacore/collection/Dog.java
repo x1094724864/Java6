@@ -3,11 +3,11 @@ package com.ddb.javacore.collection;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+@Getter@Setter
 public class Dog {
 	private String name;
 
+	
 	// 构造函数
 	public Dog(String name) {
 		super();
