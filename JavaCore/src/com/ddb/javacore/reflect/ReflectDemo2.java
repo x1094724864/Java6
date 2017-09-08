@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
+@SuppressWarnings("unused")
 public class ReflectDemo2 {
 
 	@SuppressWarnings("all") // 压制所有的警告
@@ -46,24 +47,22 @@ public class ReflectDemo2 {
 		}
 		// 获取声明的指定的方法
 		System.out.println("获取指定的方法printSelf：");
-<<<<<<< HEAD
+
 		Method method2 = clazz.getDeclaredMethod("printSelf",String.class,int.class,int.class);
-=======
-		Method method2 = clazz.getDeclaredMethod("printSelf", int.class);
->>>>>>> branch 'master' of https://github.com/1797890817/Java6.git
+//		Method method2 = clazz.getDeclaredMethod("printSelf", int.class);
 		System.out.println(method2);
 		Method method = clazz.getDeclaredMethod("printSelf");
 		System.out.println(method);
 
 		// 用反射来调用方法---invoke()
 		System.out.println("利用反射来调用指定的方法：");
-<<<<<<< HEAD
+
 		method2.invoke(student2,"李老四", 99,9999);
 		
-=======
+
 		method2.invoke(student, 9999);
 
->>>>>>> branch 'master' of https://github.com/1797890817/Java6.git
+
 		method.setAccessible(true); // 设置强制访问为true，就可以访问private的方法
 		method.invoke(student);
 

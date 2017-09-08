@@ -1,10 +1,5 @@
 package com.ddb.javacore.reflect;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class Student implements Comparable<Student> {
 	private String name = "zhangsan";
 	private int age = 30;
@@ -64,15 +59,11 @@ public class Student implements Comparable<Student> {
 	private void printSelf() {
 		System.out.println("printSelf() :Student [name=" + name + ", age=" + age + "]");
 	}
-<<<<<<< HEAD
-	
 	public void printSelf(String name,int age,int num) {
 		System.out.println("printSelf() :Student [name=" + name + ", age=" + age +",num ="+num+ "]");
-=======
-
+	}
 	public void printSelf(int num) {
 		System.out.println("printSelf() :Student [name=" + name + ", age=" + age + "num =" + num + "]");
->>>>>>> branch 'master' of https://github.com/1797890817/Java6.git
 	}
 
 }
