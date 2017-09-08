@@ -3,12 +3,14 @@ package com.ddb.javacore.reflect;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 
 public class ReflectDemo {
 
+	@SuppressWarnings("all") //压制所有的警告
 	public static void main(String[] args) throws Exception {
-		//要想使用反射，要现有clazz对象！！！
-		
+		// 要想使用反射，要现有clazz对象！！！
+
 		// 得到Class类的实例对象
 		// 第一种方式：类名.class；
 		Class clazz = Student.class;
@@ -21,6 +23,10 @@ public class ReflectDemo {
 
 		// com.ddb.javacore.reflect.Student
 		System.out.println("clazz.getName():" + clazz.getName());
+		// 权限修饰符 1
+		System.out.println("clazz.getModifiers():" + clazz.getModifiers());
+		System.out.println("Student类的权限修饰符："+ Modifier.toString(clazz.getModifiers()));
+		
 		// class java.lang.Object
 		System.out.println("clazz.getSuperclass():" + clazz.getSuperclass());
 		// Student
