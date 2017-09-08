@@ -64,8 +64,8 @@ public class Student implements Comparable<Student> {
 		System.out.println("printSelf() :Student [name=" + name + ", age=" + age + "]");
 	}
 	
-	public void printSelf(int num) {
-		System.out.println("printSelf() :Student [name=" + name + ", age=" + age +"num ="+num+ "]");
+	public void printSelf(String name,int age,int num) {
+		System.out.println("printSelf() :Student [name=" + name + ", age=" + age +",num ="+num+ "]");
 	}
 
 }
