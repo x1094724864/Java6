@@ -6,10 +6,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Student implements Comparable<Student> {
-	private String name;
-	private int age;
+	private String name = "zhansan";
+	private int age = 30;
 
-	//3个构造函数
+	// 3个构造函数
 	public Student() {
 	}
 
@@ -58,6 +58,14 @@ public class Student implements Comparable<Student> {
 		} else {
 			return 1;
 		}
+	}
+
+	private void printSelf() {
+		System.out.println("printSelf() :Student [name=" + name + ", age=" + age + "]");
+	}
+	
+	public void printSelf(int num) {
+		System.out.println("printSelf() :Student [name=" + name + ", age=" + age +"num ="+num+ "]");
 	}
 
 }
