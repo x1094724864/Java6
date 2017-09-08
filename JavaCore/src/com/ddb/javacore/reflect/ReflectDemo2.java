@@ -33,7 +33,8 @@ public class ReflectDemo2 {
 		System.out.println(student.toString());
 		// 方式二：使用指定的构造器
 		System.out.println("方式二：使用指定的构造器");
-		Student student2 = (Student) constructor.newInstance("lisi", 25);
+		// Student student2 = (Student) constructor.newInstance("lisi", 25);
+		Student student2 = (Student) constructors[0].newInstance("lisi", 25);
 		System.out.println(student2);
 
 		// 获取声明的方法
@@ -45,20 +46,53 @@ public class ReflectDemo2 {
 		}
 		// 获取声明的指定的方法
 		System.out.println("获取指定的方法printSelf：");
+<<<<<<< HEAD
 		Method method2 = clazz.getDeclaredMethod("printSelf",String.class,int.class,int.class);
+=======
+		Method method2 = clazz.getDeclaredMethod("printSelf", int.class);
+>>>>>>> branch 'master' of https://github.com/1797890817/Java6.git
 		System.out.println(method2);
 		Method method = clazz.getDeclaredMethod("printSelf");
 		System.out.println(method);
-		
 
 		// 用反射来调用方法---invoke()
 		System.out.println("利用反射来调用指定的方法：");
+<<<<<<< HEAD
 		method2.invoke(student2,"李老四", 99,9999);
 		
+=======
+		method2.invoke(student, 9999);
+
+>>>>>>> branch 'master' of https://github.com/1797890817/Java6.git
 		method.setAccessible(true); // 设置强制访问为true，就可以访问private的方法
 		method.invoke(student);
-		
-		
+
+		// 获取声明的所有字段
+		System.out.println("Student类，有" + clazz.getDeclaredFields().length + "个声明的成员属性！");
+		Field[] fields = clazz.getDeclaredFields();
+		for (Field field : fields) {
+			System.out.println(field);
+		}
+
+		// 获取指定的字段
+		System.out.println("获取指定的字段：");
+		Field field = clazz.getDeclaredField("name");
+		System.out.println(field);
+
+		// 获取sex字段
+		Field sex = clazz.getDeclaredField("sex");
+
+		// 访问字段
+		System.out.println("用反射访问字段：");
+		System.out.println("sex = " + sex.get(student));
+
+		field.setAccessible(true); // 打破封装，强制访问
+//		System.out.println("name = " + field.get(student)); // 这是读取属性值！
+
+		// 设置字段：
+		System.out.println("用反射设定属性值：");
+		field.set(student, "lisi");
+		System.out.println("name = " + field.get(student)); // 这是读取属性值！
 
 	}
 
