@@ -21,9 +21,9 @@ public class ArrayDemo4 {
 	}
 
 	// 可变参数...
-	public static void print(String... args2) {
-		for (int j = 0; j < args2.length; j++) {
-			out.println("args2[" + j + "] = " + args2[j]);
+	public static void print(String... b) {
+		for (int j = 0; j < b.length; j++) {
+			out.println("args2[" + j + "] = " + b[j]);
 		}
 	}
 
