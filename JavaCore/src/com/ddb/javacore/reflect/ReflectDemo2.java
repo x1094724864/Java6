@@ -3,7 +3,6 @@ package com.ddb.javacore.reflect;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
 
 @SuppressWarnings("unused")
 public class ReflectDemo2 {
