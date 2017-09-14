@@ -19,7 +19,7 @@ public enum WeekEnum2 { // 使用 enum 定义的枚举类默认继承了 java.la
 
 	};// 如果没有其他属性或者方法等，可以不写；，如果有一定要写；
 
-	 // @Setter不支持写在枚举上面
+	//@Setter //不支持写在枚举上面
 	private int index; // 索引
 	private String desc; // 描述
 
