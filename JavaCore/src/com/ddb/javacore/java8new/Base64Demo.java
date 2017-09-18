@@ -20,7 +20,6 @@ public class Base64Demo {
 			System.out.println("Base64 编码字符串 (URL) :" + base64encodedString);
 
 			StringBuilder stringBuilder = new StringBuilder();
-
 			for (int i = 0; i < 10; ++i) {
 				stringBuilder.append(UUID.randomUUID().toString());
 			}
