@@ -86,9 +86,7 @@ public class StreamAPI {
 
 	private static int getCountEmptyStringUsingJava7(List<String> strings) {
 		int count = 0;
-
 		for (String string : strings) {
-
 			if (string.isEmpty()) {
 				count++;
 			}
@@ -98,9 +96,7 @@ public class StreamAPI {
 
 	private static int getCountLength3UsingJava7(List<String> strings) {
 		int count = 0;
-
 		for (String string : strings) {
-
 			if (string.length() == 3) {
 				count++;
 			}
@@ -110,9 +106,7 @@ public class StreamAPI {
 
 	private static List<String> deleteEmptyStringsUsingJava7(List<String> strings) {
 		List<String> filteredList = new ArrayList<String>();
-
 		for (String string : strings) {
-
 			if (!string.isEmpty()) {
 				filteredList.add(string);
 			}
@@ -122,9 +116,7 @@ public class StreamAPI {
 
 	private static String getMergedStringUsingJava7(List<String> strings, String separator) {
 		StringBuilder stringBuilder = new StringBuilder();
-
 		for (String string : strings) {
-
 			if (!string.isEmpty()) {
 				stringBuilder.append(string);
 				stringBuilder.append(separator);
@@ -136,10 +128,8 @@ public class StreamAPI {
 
 	private static List<Integer> getSquares(List<Integer> numbers) {
 		List<Integer> squaresList = new ArrayList<Integer>();
-
 		for (Integer number : numbers) {
 			Integer square = new Integer(number.intValue() * number.intValue());
-
 			if (!squaresList.contains(square)) {
 				squaresList.add(square);
 			}
