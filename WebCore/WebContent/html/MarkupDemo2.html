@@ -5,6 +5,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<bgsound src="audio/adou.mp3" loop="infinite">
 	<a name="top">网页头部</a>
 
 	<!-- a 标签，超链接 -->
@@ -32,7 +33,7 @@
 	<form action="../index.html" method="get">
 		<!-- input 标签，表单输入组件 -->
 		<!-- <input name="username" type="text" size="10" maxlength="10"  /> -->
-		<input name="username" type="text" size="10" max="15" min="4"
+		<input name="username" type="text" size="10" max="15" min="4" 
 			readonly="readonly" value="这个值是不可以修改的！" />
 		<!-- size 控制的是组件的长度，maxlength控制的是能输入的字符数 -->
 		<br /> <input id="passwd" name="passwd" type="password"> <span>性别：</span>
@@ -72,7 +73,7 @@
 			type="color">
 	</form>
 
-	<table width="200" border="1">
+	<table cellspacing="0" width="200" border="1">
 		<tr>
 			<td colspan="3">学生成绩</td>
 			<!-- 跨3列 -->
