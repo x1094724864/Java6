@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="../../js/JavaScriptDemo.js"></script>
 <script type="text/javascript">
 	/* 定义一个函数 */
 	function age() { //使用function 定义一个函数，方法
@@ -61,10 +62,45 @@
 			document.write("参数数量不匹配！");
 			for ( var arg in args) {
 				//document.writeln(args[arg]);
-				document.write(args[arg] + "<br/>");	//使用标签来换行！
+				document.write(args[arg] + "<br/>"); //使用标签来换行！
 			}
 			break;
 		}
+	}
+
+	//定义Student的构造函数
+	function Student(name) {
+		this.name = name; //定义一个name属性
+		this.getName = getName; //定义一个getName的方法
+		this.toString = toString; //定义一个toString的方法
+	}
+	function getName() {
+		return this.name;
+	}
+	function toString() {
+		return "Student : " + this.name;
+	}
+	//Student 构造函数演示
+	function Button1_onclick() {
+		var s = new Student("lijie", 20, "asdad", "13971212");
+		console.debug(s.toString());
+		alert(s.getName());
+		alert(s.name);
+	}
+
+	//Pasta构造函数演示
+	function Btn_Pasta() {
+		var pasta = new Pasta("玉米", 200, "圆形");
+		alert(pasta.toString());
+		// 都没有添加到 pasta 对象的三个新属性。添加的是expando属性，仅仅是当前实例有！
+		pasta.color = "pale straw";
+		pasta.drycook = 7;
+		//添加原型属性，所有的实例都会有这个属性
+		Pasta.prototype.foodgroup = "carbohydrates";
+		pasta.freshcook = 0.5;
+		var chowFun = new Pasta("rice", 3, "flat", false);
+		// chowFun 对象或其他现有的 pasta 对象
+		alert(chowFun.toString());
 
 	}
 </script>
@@ -89,6 +125,11 @@
 	<input type="button" onclick="funcArgs(12,25,30,40)" value="函数参数数量演示4" />
 	<input type="button" onclick="funcArgs(12,25,30,40,50)"
 		value="函数参数数量演示5" />
+
+	<hr />
+	<input type="button" onclick="Button1_onclick()"
+		value="Student 自定义构造函数演示">
+	<input type="button" onclick="Btn_Pasta()" value="Pasta 自定义构造函数演示">
 
 </body>
 </html>
