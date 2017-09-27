@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 定义一个函数 */
+	function age() {		//使用function 定义一个函数，方法
+		document.write("I am 20!");
+	}
+	
+	//定义一个方法
+	function DialogBox() {
+		//alert("Welcome!");	//这是一个警告框，窗口中只有一个确认按钮
+		//var result = confirm("Can you speak english?");	//这是一个确认按钮，有两个按钮可以选择
+		//通过var 关键字可以用来声明变量,几乎所有的变量类型的声明都是使用var
+		//result = confirm("Can you speak english?");	//这是一个确认按钮，有两个按钮可以选择
+		//没有var 来声明变量，这个result也可以用!
+		//console.info(result);//使用console.info(),向浏览器的控制台输出信息！
+		
+		//提示用户输入对话框
+		var ret = prompt("How old are you?",23);	//有两个按钮，一个单行文本框！
+		console.info("ret: " +ret);
+		
+	}
+	
+	function WinClose() {
+		window.close();		//关闭当前窗口！
+	}
+	
+	
+</script>
+
+</head>
+<!-- <body onload="age()"> -->
+<body>
+<!-- onload 是载入事件，事件处理程序是age()方法 -->
+
+	<input type="button" onclick="DialogBox()" value="系统窗口演示">
+	
+	<a href="javascript:self.close()">关闭窗口</a>
+	<br/>
+	<input type="button" onclick="WinClose()" value="关闭窗口" /> 
+	
+
+</body>
+</html>
