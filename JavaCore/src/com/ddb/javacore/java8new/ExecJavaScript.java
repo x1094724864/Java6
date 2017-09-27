@@ -25,7 +25,14 @@ public class ExecJavaScript {
 	}
 }
 
-//在 JavaScript 中引用 Java 类：
+//在 JavaScript 中引用 Java 类：   
+//在CMD中输入jjs可以进入终端
+//将下面的代码保存为.js文件后，可以运行：
+//C:\Users\Administrator\Desktop>jjs test.js
+//78952000000000002017.94
+//
+//C:\Users\Administrator\Desktop>
+
 /*var BigDecimal = Java.type('java.math.BigDecimal');
 
 function calculate(amount, percentage) {
