@@ -93,7 +93,7 @@
 		var pasta = new Pasta("玉米", 200, "圆形");
 		alert(pasta.toString());
 		// 都没有添加到 pasta 对象的三个新属性。添加的是expando属性，仅仅是当前实例有！
-		pasta.color = "pale straw";
+		pasta.color = " pale straw ";
 		pasta.drycook = 7;
 		//添加原型属性，所有的实例都会有这个属性
 		Pasta.prototype.foodgroup = "carbohydrates";
@@ -102,6 +102,32 @@
 		// chowFun 对象或其他现有的 pasta 对象
 		alert(chowFun.toString());
 
+		//原型方法
+		Pasta.prototype.trim = function(str) {
+			// 用正则表达式将前后空格用空字符串替代。
+			return str.replace(/(^\s*)|(\s*$)/g, "");
+		}
+		console.info("pasta.color=" + pasta.color);
+		var trimColor = pasta.trim(pasta.color)
+		console.info("pasta.color=" + trimColor);
+
+	}
+
+	function ArrayExpdo() {
+		// 三个元素的数组
+		var myArray = new Array(3);
+		myArray[0] = "Hello";
+		myArray[1] = 42;
+		myArray[2] = new Date(2000, 1, 1);
+		myArray[3] = new Date(2001, 11, 12);
+		
+		window.alert(myArray.length);// 显示数组的长度 3
+		myArray.expando = "JScript!";// 添加某些 expando 属性
+		myArray["another Expando"] = "Windows";
+		//myArray.another Expando2 = "Windows2";
+		// 仍然显示 3，因为两个 expando 属性，并不影响长度。
+		window.alert(myArray.length);
+	
 	}
 </script>
 
@@ -130,6 +156,8 @@
 	<input type="button" onclick="Button1_onclick()"
 		value="Student 自定义构造函数演示">
 	<input type="button" onclick="Btn_Pasta()" value="Pasta 自定义构造函数演示">
+
+	<input type="button" onclick="ArrayExpdo()" value="Array Expando Demo" />
 
 </body>
 </html>
