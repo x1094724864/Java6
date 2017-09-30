@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My title</title>
+<script type="text/javascript" src="../../js/DomDemo.js">
+/* function changBgColor() {
+	if (document.body.style.backgroundColor == 'lavender') {
+		document.body.style.backgroundColor = 'white';
+	} else {
+		document.body.style.backgroundColor = 'lavender';
+	}
+} */
+</script>
+<script type="text/javascript">
+	function changBgColor() {
+		if (document.body.style.backgroundColor == 'lavender') {
+			document.body.style.backgroundColor = 'white';
+		} else {
+			document.body.style.backgroundColor = 'lavender';
+		}
+	}
+</script>
+</head>
+<body>
+	<a href="http://www.360.cn">My link</a>
+	<h1 id="h001">My header</h1>
+	<h1 id="h002">My header</h1>
+	<h1 id="h003">My header</h1>
+	<span id="sp01" name="span01" style="font-size: 35px;">这是一个span标签</span>
+	<br />
+	<span id="sp02" name="span01" class="clazz">这是个span<b>标签</b></span>
+	<script>
+		//var txt = document.getElementById("sp02").innerHTML;
+		var txt = document.getElementById("sp02").innerText;
+		document.write(txt);
+	</script>
+
+	<p id="p1">Hello World!</p>
+	<p id="p2">Hello world!</p>
+
+	<input type="button"
+		onclick="document.body.style.backgroundColor='lavender';"
+		value="修改背景颜色">
+
+	<input type="button"
+		onclick="document.body.style.backgroundColor='white';" value="还原背景颜色">
+
+	<input type="button" onclick="changBgColor()" value="设置还原背景颜色">
+
+	<form>
+		<p>
+			<textarea id="textArea" rows="5" cols="30"></textarea>
+		</p>
+		<input type="submit" value="Add some text to the page" />
+	</form>
+
+
+
+</body>
+</html>
