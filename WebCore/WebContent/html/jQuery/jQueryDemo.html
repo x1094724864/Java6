@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../../js/lib/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	function get_text() {
+		//这是原生的js写法
+		//alert(document.getElementById('txt').value);	
+		//使用jQuery的写法
+		alert($('#txt').val());
+	}
+
+	function tagSelector() {
+		$("div").css('border', '1px solid red');
+	}
+
+	function idSelector() {
+		$("#to").html($("#from").html());
+		//html() 方法内没有参数的表示获取属性值；方法内如果有参数则是设定属性值
+		//html() 类似于innerHtml的属性
+	}
+
+	function classSelector() {
+		$(".fruit").css('color', 'red');
+
+	}
+
+	function sortSelector() {
+		$('.fruit,#tomato').css('color', 'red');
+	}
+	function starSelector() {
+		console.log($('*')[0]);
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="txt" />
+	<button type="button" onclick="get_text();">Go</button>
+	<hr />
+	<div style="width: 100px; height: 100px;">
+		<span>我是一个div</span>
+	</div>
+
+	<input type="button" onclick="tagSelector()" value="标签选择器">
+	<div id="from">div的内容</div>
+	<div id="to"></div>
+	<input type="button" onclick="idSelector()" value="ID选择器">
+
+	<ul>
+		<li class="fruit">Apple</li>
+		<li id="tomato">Tomato</li>
+		<li class="fruit">Banana</li>
+		<li>Potato</li>
+		<li class="fruit">Orange</li>
+	</ul>
+	<input type="button" onclick="classSelector()" value="Class选择器">
+	<input type="button" onclick="sortSelector()" value="逗号选择器">
+	<input type="button" onclick="starSelector()" value="*选择器">
+
+
+
+</body>
+</html>
