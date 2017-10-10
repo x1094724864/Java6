@@ -23,8 +23,9 @@
 	}
 
 	function classSelector() {
+		//css()方法，一个参数表示获取样式的值，两个参数表示设定样式值
 		$(".fruit").css('color', 'red');
-
+		alert('$(".fruit").css("color"):' + $(".fruit").css('color'))
 	}
 
 	function sortSelector() {
@@ -52,12 +53,12 @@
 	function neighborSelector2() {
 		$('p ~ label').css('color', 'red');
 	}
-	
+
 	function firstLast() {
 		$('li:first').css('color', 'red');
 		$('li:last').css('color', 'blue');
 	}
-	
+
 	function firstLastChild() {
 		$('li:first-child').css('color', 'red');
 		$('li:last-child').css('color', 'blue');
@@ -65,22 +66,56 @@
 	function eqSelector() {
 		$('li:eq(7)').css('color', 'red');
 	}
-	
+
 	function containsSelector() {
 		$('li:contains(to)').css('color', 'blue');
 	}
-	
+
 	function hasSelector() {
 		$('li:has(span)').css('color', 'red');
+
 	}
 	function showHidden() {
 		$('p:hidden').show();
 	}
-	
+
 	function showHidden2() {
 		$('p:visible').hide();
 	}
-	
+
+	function propSelector() {
+		//$('input[id=ipt]').val('hello');
+		//$('input[class=cls_ipt]').val('hello2');
+		$('input[name="name_ipt"]').val('hello3');
+		//val()方法，无参数表示获取值，有一个参数表示设定值
+	}
+
+	function cloneE() {
+		var cloned_p = $('#pp02').clone();
+		$('#pp02').after(cloned_p);
+	}
+
+	function over() {
+		$(this).css('color', 'red')
+	}
+	function out() {
+		$(this).css('color', 'black')
+	}
+
+	function showAndHide() {
+		var display = $('#div01')[0].style.display;
+		if ( display ||display == "none") {
+			$('#div01').show(3000, function() {
+				$('#btn01').val("隐藏Div");
+			});
+		} else {
+			$('#div01').hide(2000, function() {
+				$('#btn01').val("显示Div");
+			});
+
+		}
+
+	}
 </script>
 </head>
 <body>
@@ -126,7 +161,11 @@
 		<li>Banana</li>
 		<li>Potato</li>
 		<li>Orange</li>
-		<li>Apple2<p><span>Span</span></p></li>
+		<li>Apple2
+			<p>
+				<span>Span</span>
+			</p>
+		</li>
 	</ul>
 	<input type="button" onclick="firstLast()" value="第一个/最后一个选择器">
 	<input type="button" onclick="firstLastChild()" value="第一个/最后一个子元素选择器">
@@ -134,12 +173,83 @@
 	<input type="button" onclick="containsSelector()" value="包含选择器">
 	<input type="button" onclick="hasSelector()" value="Has选择器">
 
-	<p style="display:none;">我是隐藏的</p>
+	<p style="display: none;">我是隐藏的</p>
 	<input type="button" onclick="showHidden()" value="显示过滤选择器">
 	<input type="button" onclick="showHidden2()" value="隐藏过滤选择器">
-	
+
+	<hr />
+	<input id="ipt" name="name_ipt" type="text" class="cls_ipt" />
+	<input type="button" onclick="propSelector()" value="属性选择器">
 
 
+	<form id="my_form">
+		<input type="text" /> <input type="radio" /> <input type="radio"
+			checked="checked" /> <input type="checkbox" /> <input
+			type="checkbox" checked="checked" />
+	</form>
+	<script type="text/javascript">
+		console.log($('#my_form :input:checked'));
+	</script>
+
+	<hr />
+	<select id="sel" multiple="multiple">
+		<option value="0">苹果</option>
+		<option value="1" selected="selected">桔子</option>
+		<option value="2">荔枝</option>
+		<option value="3" selected="selected">葡萄</option>
+		<option value="4">香蕉</option>
+	</select>
+	<script type="text/javascript">
+		console.log($('#sel :selected'));
+	</script>
+
+	<hr />
+	<form id="my_form2" action="foo.php"></form>
+
+	<script type="text/javascript">
+		console.log($('#my_form2').attr('action'));
+		$('#my_form2').attr('action', 'bar.html');
+		console.log($('#my_form2').attr('action'));
+	</script>
+
+	<!-- 演示属性的删除和添加 -->
+	<!-- <img alt="demo" src="../../imgs/demo.jpg" /> -->
+
+	<p id="pp00">
+		<b>Hello</b>
+	</p>
+
+	<script type="text/javascript">
+		console.log($('p').html());
+		//$('p').text('<i>World</i>');
+		console.log($('p').html());
+	</script>
+
+	<p id="pp01" class="A B C D E">这是一个P标签</p>
+
+	<p id="pp02">
+		<input type="text" /><input type="button" value="Go" />
+	</p>
+	<input type="button" onclick="cloneE()" value="$ clone" />
+
+	<script type="text/javascript">
+		$(function() {
+			$('#btn').bind('click', function() {
+				$(this).attr("disabled", "true");
+			})
+
+			$('#txt01').hover(over, out);
+		});
+	</script>
+
+	<input id="btn" type="button" value="点我" />
+
+	<input id="txt01" type="text" value="这是初始值" />
+	<hr />
+	<div id="div01"
+		style="width: 150px; height: 100px; color: red; background-color: lightblue;">
+		这是一个div元素</div>
+	<input id="btn01" type="button" value="隐藏Div" onclick="showAndHide()" />
 
 </body>
 </html>
