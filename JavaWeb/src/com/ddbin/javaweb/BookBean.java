@@ -1,5 +1,9 @@
 package com.ddbin.javaweb;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter@Setter
 public class BookBean {
 	private String bookName = "";
 	private int bookNum = 1;
@@ -14,17 +18,6 @@ public class BookBean {
 	}
 	
 	//创建需要的getter和Setter方法
-	public String getBookName() {
-		return bookName;
-	}
-	public void setBookName(String bookName) {
-		this.bookName = bookName;
-	}
-	public int getBookNum() {
-		return bookNum;
-	}
-	public void setBookNum(int bookNum) {
-		this.bookNum = bookNum;
-	}
+	
 
 }

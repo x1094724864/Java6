@@ -21,6 +21,6 @@
 	书 名：<jsp:getProperty property="bookName" name="book" />
 	<br /> 数 量：<jsp:getProperty property="bookNum" name="book" />
 	<br />
-
+	
 </body>
 </html>
