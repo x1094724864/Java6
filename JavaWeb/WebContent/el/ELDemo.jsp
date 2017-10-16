@@ -53,13 +53,21 @@
 	<p>浏览器的类型是：</p>
 	${header['User-Agent']}
 	
+	<!-- 测试搜索范围 -->
 	<% 
 		BookBean bb = new BookBean("JavaWeb",25);
-		pageContext.setAttribute("book", bb);		//放到页面的范围内
+		pageContext.setAttribute("book", bb,pageContext.PAGE_SCOPE);		//放到页面的范围内
 	%>
 	<p>书名字的长度：</p>
 	<%-- ${book.name} --%>
-	${book.getBookName().length()}
+	不写范围 :${book.getBookName().length()}	<br/>
+	pageScope :${pageScope.book.getBookName().length()}	<br/>
+	requestScope:${requestScope.book.getBookName().length()}<br/>
+	sessionScope:${sessionScope.book.getBookName().length()}<br/>
+	applicationScope:${applicationScope.book.getBookName().length()}<br/>
+	
+	<p>类型自动转换：</p>
+	${param.count + 20} 
 	
 	
 </body>
