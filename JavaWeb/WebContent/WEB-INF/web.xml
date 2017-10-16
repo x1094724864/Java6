@@ -12,7 +12,12 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
-
+	<!-- EL的初始化参数演示 -->
+	<context-param>
+		<description>demo</description>
+		<param-name>name</param-name>
+		<param-value>lisi</param-value>
+	</context-param>
 
 	<servlet>
 		<servlet-name>dbinit</servlet-name>
