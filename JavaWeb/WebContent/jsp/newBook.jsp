@@ -10,7 +10,7 @@
 	<jsp:include page="newbook1.html" />
 	<jsp:include page="newbook2.html"></jsp:include>
 	<jsp:include page="newbook3.jsp">
-		<jsp:param value="zhangsan" name="name" />
+		<jsp:param value="张三" name="name" />
 		<jsp:param value="25" name="age" />
 	</jsp:include>
 </body>

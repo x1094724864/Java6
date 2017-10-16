@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%-- <%
+		request.setCharacterEncoding("UTF8");
+		response.setCharacterEncoding("UTF-8");
+	%> --%>
+
 	<h1>这是一个JSP的页面</h1>
 	name:<%=request.getParameter("name")%>
 	age:<%=request.getParameter("age")%>

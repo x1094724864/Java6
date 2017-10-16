@@ -9,13 +9,13 @@
 <body>
 	<%! int count = 0; %><%-- 定义全局变量 --%>
 	<% 
-		response.setHeader("refresh", "2");	//两秒刷新
-		//response.setHeader("refresh", "4;url='http://www.baidu.com'");
+		//response.setHeader("refresh", "2");	//两秒刷新
+		response.setHeader("refresh", "0;url='http://www.baidu.com'");
 	%>
 	<p>当前刷新次数：</p><%= count++ %>
 	<%
-		if (count == 5){
-			response.sendRedirect("../scope/session2.jsp");
+		if (count == 3){
+			//response.sendRedirect("requestDemo.jsp");
 		}
 	%>
 	
