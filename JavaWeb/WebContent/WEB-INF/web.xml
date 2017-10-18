@@ -1,38 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-	id="WebApp_ID" version="3.1">
-	<display-name>JavaWeb</display-name>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
-	</welcome-file-list>
-	<!-- EL的初始化参数演示 -->
-	<context-param>
-		<description>demo</description>
-		<param-name>name</param-name>
-		<param-value>lisi</param-value>
-	</context-param>
-
-	<servlet>
-		<servlet-name>dbinit</servlet-name>
-		<jsp-file>/WEB-INF/init.jsp</jsp-file>
-		<init-param>
-			<param-name>driver</param-name>
-			<param-value>org.gjt.mm.mysql.Driver</param-value>
-		</init-param>
-		<init-param>
-			<param-name>url</param-name>
-			<param-value>jdbc:mysql://localhost:3306/mldn</param-value>
-		</init-param>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>dbinit</servlet-name>
-		<url-pattern>/config.mldn</url-pattern>
-	</servlet-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>JavaWeb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <description>demo</description>
+    <param-name>name</param-name>
+    <param-value>lisi</param-value>
+  </context-param>
+  <!-- 使用servlet标签来向容器注册servlet -->
+  <servlet>
+  	<servlet-name>ServletDemo</servlet-name>
+  	<servlet-class>com.ddbin.javaweb.servlet.ServletDemo</servlet-class>
+  </servlet>
+  <!-- 使用servlet-mapping来声明能处理的请求 -->
+  <servlet-mapping>
+  	<servlet-name>ServletDemo</servlet-name>
+  	<!-- 若想支持多个URL链接，则使用多个url-pattern标签 -->
+  	<url-pattern>/servlet/ServletDemo</url-pattern>
+  	<url-pattern>/now</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>dbinit</servlet-name>
+    <jsp-file>/WEB-INF/init.jsp</jsp-file>
+    <init-param>
+      <param-name>driver</param-name>
+      <param-value>org.gjt.mm.mysql.Driver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>url</param-name>
+      <param-value>jdbc:mysql://localhost:3306/mldn</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dbinit</servlet-name>
+    <url-pattern>/config.mldn</url-pattern>
+  </servlet-mapping>
 </web-app>
