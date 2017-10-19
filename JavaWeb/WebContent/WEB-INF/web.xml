@@ -38,7 +38,7 @@
       <param-name>count</param-name>
       <param-value>10000</param-value>
     </init-param>
-    <load-on-startup>1</load-on-startup>	<!-- 跟随web容器实例化 -->
+    <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>InitParameter</servlet-name>
