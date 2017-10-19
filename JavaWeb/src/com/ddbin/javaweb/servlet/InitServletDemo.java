@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(description = "Demo init param", urlPatterns = { "/servlet/InitServletDemo" }, initParams = {
 		@WebInitParam(name = "name", value = "zhangsan", description = "student name"),
-		@WebInitParam(name = "age", value = "25", description = "student age") })
+		@WebInitParam(name = "age", value = "25", description = "student age") }, loadOnStartup = 1)
 public class InitServletDemo extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
