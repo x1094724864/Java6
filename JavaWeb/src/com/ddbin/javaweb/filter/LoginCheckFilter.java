@@ -22,7 +22,7 @@ import javax.servlet.http.HttpSession;
 				DispatcherType.INCLUDE, 
 				DispatcherType.ERROR
 		}
-					, urlPatterns = { "/servlet/MyLoginServlet2" })
+					, urlPatterns = { "/ABCHomePage" })
 public class LoginCheckFilter implements Filter {
 
     /**

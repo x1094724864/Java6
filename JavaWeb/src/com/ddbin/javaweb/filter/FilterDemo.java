@@ -40,7 +40,7 @@ public class FilterDemo implements Filter {
 		System.out.println("FilterDemo doFilter 开始执行...");
 		HttpServletRequest req = (HttpServletRequest) request;
 		// pass the request along the filter chain
-		//chain.doFilter(request, response);
+		chain.doFilter(request, response);
 		System.out.println("拦截了请求："+ req.getRequestURL().toString());
 		System.out.println("FilterDemo doFilter 执行结束...");
 	}

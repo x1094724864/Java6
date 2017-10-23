@@ -34,6 +34,8 @@ public class EnterDemo extends HttpServlet {
 		String name = request.getParameter("username");
 		String pwd = request.getParameter("password");
 		if ("zhangsan".equals(name) && "123456".equals(pwd)) {
+			//将用户名的信息存到session里面
+			request.getSession().setAttribute("userid", name);
 			ServletContext context = getServletContext();
 			// 得到RequestDispatcher对象，调用forward()
 			RequestDispatcher rd = context.getRequestDispatcher("/servlet/welcome.html");
