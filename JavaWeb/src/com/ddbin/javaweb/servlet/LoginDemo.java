@@ -3,8 +3,6 @@ package com.ddbin.javaweb.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,7 +38,7 @@ public class LoginDemo extends HttpServlet {
 		out.println("<title>LoginPage</title>");
 		out.println("</head>");
 		out.println("<body>");
-		out.println("<form method=\"post\" action=\"EnterDemo\">");
+		out.println("<form method=\"post\" action=\"/JavaWeb/EnterDemo\">");
 		out.println("<table>");
 		out.println("<tr>");
 		out.println("<td>请输入用户名</td>");
